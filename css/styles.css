@@ -1,0 +1,889 @@
+/* @import url(..//css/font.css); this is use to link the fonts to the css */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,200;1,300&family=Lexend:wght@200;300;400;500&family=Montserrat:ital,wght@0,400;1,300;1,400&family=Poppins:ital,wght@0,200;0,300;1,200&family=Ubuntu:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+
+/*ThIS ARE THE DIFFERENT FONT THAT ARE USE THIS CAN BE GOTTEN FROM googlefonts.com*/
+/*
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lexend', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+html,body{
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+
+:root{
+
+    /* THEME COLORS ----- we can get different colors from coolors.co*/
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f; /*ALL THIS ARE USED TO GIVE COLORS TO THE WEBSITE*/
+    --white: #ffffff;
+    --midnight: #104f55;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #ED6436;
+    --secondary: #65C178;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #F2F2F4;
+    --dark: #181818;
+
+
+    /* GRADIENT COLOR --- WE CAN GET THE GRADIENT  webgradients.com */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}/* root helps us to specify var and allocate colors to an object in css, it always start with -- and the
+name of the variable */
+
+
+/* ----------------------------GLOBAL CLASSES------------------------ */
+a{
+    text-decoration: none; /*THIS IS USED TO REMOVE ALL THE UNDERLINE FROM THE ANCHOR(a) TAG*/
+    color: var(--text-gray);
+   
+
+}
+.flex-row{
+    display: flex; /*THIS IS USED TO SPLIT THE ELEMENT ON A ROW i.e ON A STRAIGHT LINE*/
+    flex-direction: row; 
+    flex-wrap: wrap; 
+}
+
+ul,li{
+    list-style: none; /*THIS IS USED USED TO REMOVE THE BULLET FROM THE LIST ITEM*/
+    font-family: 'Ubuntu', sans-serif; /*THIS IS USED TO CHANGE THE  FONT OF THE ELEMENT */
+    
+}
+ 
+h1 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 2.5rem; /*THIS IS USED TO INCREASE OR DECREASE THE FONT SIZE*/
+    }
+
+h2{
+    font-size: 1.7rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h3, h4{
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+
+}
+
+p, ul, li{
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+span{
+    font-family: 'Ubuntu', sans-serif;
+}
+.btn{
+    border-radius: 20px; /*THIS GIVE THE BUTTON THE CHAMFERED EDGES ON THE FOUR CORNERS*/
+    color: #fff;
+    background: transparent; /*THIS IS USED TO TURN THE BACKGROUND COLOR TRANSPARENT*/
+    padding:.9rem 2.5rem; /*THIS IS USED TO GIVE THE ELEMENT SPACE FROM WITHIN*/
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid #fff; /*THIS IS USED TO GIVE BORDER OF 1PX SOLID TO THE BUTTON*/
+
+}
+
+.btn:hover{
+    background: var(--sky);
+}
+
+.text-gray{
+    color: var(--text-gray);
+}
+
+
+
+
+/* NAVBAR HEADER STARTS HERE-------------------------------------- */
+.container{
+    background-color: gray;
+}
+
+.container .main-head h1{
+    font-size: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--midnight);
+}
+
+.contact{
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-1 span{
+    color: var(--gray);
+}
+.second-header{
+    display: flex;
+    justify-content: space-between; /*THIS IS USED TO GIVE SPACE IN BETWEEN OF TWO DIV i.e IT IS USED TO SPLIT THE DIV ELEMENT INTO TWO*/
+    margin-top: 2rem; /*THIS IS USED TO GIVE SPACE FROM THE TOP OF THE ELEMENT*/
+    background-color: black;/*THIS IS USED TO CHANGE THE BACKGROUND COLOR TO BLACK*/
+}
+
+.customer-link{
+    display: flex;
+    gap: 2rem; /*THIS WORKS LIKE MARGIN TOO, IT IS USED TO GIVE*/
+}
+
+.main-head{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.main-head > h2{
+    padding-left: 35px;
+}
+
+.nav-items{
+    display: flex;
+    margin: 0; /*THIS MEANS THAT THERE SHOULD BE NO SPACE BETWEEN THE ELEMENT*/
+    justify-content: space-between;
+    background-color: var(--gray-dark);
+    padding: 20px 0; /*THIS IS USED TO GIVE PADDING TO AND PADDING BOTTOM OF 20PX AND PADDING RIGHT AND PADDING RIGHT OF 0PX*/
+}
+
+.nav-items .nav-link {
+    display: flex;
+    list-style: none;
+}
+
+.nav-items .nav-link > li > a{
+    padding:1.0rem 1rem;
+    font-size: 1.1rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.nav-items > .nav-link > li :hover{
+    background: var(--sky);    
+}
+
+.customer-link > .btn{
+    margin-right: 20px;
+}
+
+/* NAVBAR HEADER  STOPS HERE-------------------------------------- */
+
+
+/* HERO SECTION STARTS HERE------------------- */
+
+#hero{
+    background-image: url(../images/hero-1.jpg); /*THIS IS USED TO CHANGE THE BACKGROUND IMAGE */
+    width: 100%; /*THIS IS USED TO DECREASE OF INCREASE THE WIDTH OF THE IMAGE*/
+    height: 100vh; /*THIS IS USED TO DECREASE OF INCREASE THE HEIGHT OF THE IMAGE*/
+    background-position: top 25% right 0;  /*THIS IS USED TO POSITION OR MOVE THE IMAGE*/
+    background-size: 50%; /*THIS IS MEANS THAT THE BACKGROUND IMAGE SIZE SHOULD BE 50% OF THE WHOLE WIDTH OF THE SCREEN*/
+    background-repeat: no-repeat; /*THIS IS USED TO ENSURE THAT THE IMAGE DOES NOT DUPLICATE IT SELF*/
+    object-fit: contain;
+    object-position: center;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;/*THI IS USED TO ALIGN THE ITEM TO THE CENTRE*/
+    align-items: flex-start; /*THIS IS USED TO ALIGN THE ITEM TO THE BEGINNING OF THE ELEMENT*/
+    background-color: var(--warning);
+}
+
+
+#hero >h1{
+    color: var(--midnight);
+    text-transform: uppercase; /*THIS IS USED TO CHANGE THE TEXT TO UPPERCASE*/
+}
+
+#hero button{
+    background-image: url(../images/button.png);
+    border: 0;   
+    color: #088178;
+    background-color: transparent; 
+    padding: 15px 80px 15px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer; /*THIS HELPS TO CHANGE THE MOUSE CURSOR TO A HAND CLICK(POINTER)*/
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* HERO SECTION STOPS HERE------------------- */
+
+
+/* PRODUCTS STARTS HERE-------------------------------- */
+ 
+.shop .products-container {
+    display: grid;
+    justify-content: flex-start;
+    grid-template-columns: 1fr 1fr 1fr; /*THIS SPECIFIES THE SIZE OF THE COLUMN i.e WE SHOULD HAVE 3 COLUMN ON EACH LINE*/
+    gap: 1rem;
+    padding-left: 5rem;
+    justify-content: center; /*THIS HELPS TO ALIGN A FLEX ITEM TO THE CENTRE*/
+    align-items: center;  cursor: pointer; /*THIS HELPS TO ALIGN THE ITEM TO THE CENTRE*/
+    align-self: center;  /*THIS HELPS TO ALIGN THE ITEM TO THE CENTRE*/
+}
+
+.shop .heading{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem;
+}
+  
+.shop .products-container .products {
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    perspective: 1px;  
+    cursor: pointer;
+}
+  
+.shop .products-container .products:hover .image img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.2); /*THIS IS USED TO INCREASE THE IMG TO A SCALE OF 1.2 i.e SLIGHTLY BIGGER*/
+  }
+  
+
+.shop .products-container .products .image {
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+}
+  
+.shop .products-container .products .image img {
+    height: 100%;
+    width: 80%;  
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 1px 3px 5px 2px rgba(154, 150, 150, 1); /*THIS IS USED TO GIVE BACKGROUND SHADOWS AROUND THE ELEMENT*/
+}
+
+.shop .products-container .products .image img:hover{
+    border-radius: 30px; /*IT IS USED TO GIVE CHAMFERED SIDES TO THE FOUR SIDES ELEMENT*/
+}
+  
+.shop .products-container .products .icons {
+    position: absolute;
+    top: 1rem; /*IT IS USED TO POSITION TH ICON TO THE TOP*/
+    right: 1.3rem; /*IT IS USED TO POSITION THE ITEM TO THE RIGHT*/
+    z-index: 10;
+    transform: translateX(10rem);
+}
+
+.shop .products-container .products:hover .icons {
+    transform: translateX(-3rem);
+}
+  
+  
+.shop .products-container .products .icons a {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 10px;
+    line-height: 5rem;
+    font-size: 2.2rem;
+    margin-top: 0.5rem;
+    background: var(--sky);
+    color: #130f40;
+    text-align: center;
+    align-self: center;
+    padding-bottom: 5px;
+}
+  
+.shop .products-container .products .icons a:hover {
+    color: #fff;
+    background: var(--yellow);
+}
+  
+.shop .products-container .products .content {
+    display: flex;
+    flex-direction: column;
+    padding-right: 6rem;
+}
+
+.shop .products-container .products .content > .content-star{
+    display: flex;
+    gap: 0.5rem;
+    color: var(--info);
+    padding-top: 20px;
+    justify-content: center;
+    align-self: center;
+
+}
+  
+.shop .products-container .products .content h3 {
+    font-size: 1.7rem;
+    color: #130f40;
+    padding-bottom: .5rem;
+    text-align: center;
+}
+  
+.shop .products-container .products .content .amount {
+    font-size: 1.5rem;
+    color: #e67e22;
+    text-align: center;
+}
+
+  /* PRODUCTS STOPS HERE-------------------------------- */
+ 
+
+  /* SERVICES SECTION STARTS HERE------------------------------- */
+.blog .services{
+    margin-top: 2rem;
+}
+
+.services h1{
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    margin-top: 5rem;
+}
+
+.blog-all{
+    padding-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.blog-content{
+    margin: 1rem;
+    box-shadow: 1px 3px 5px 2px rgba(154, 150, 150, 1);
+    width: 20rem;
+    height: 25rem;
+    padding-bottom: 50px;    
+}
+
+.blog-content img{
+    width: 20rem;
+    height: 250px;
+}
+
+.blog-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+}
+
+.blog-title h3{
+    color: black;
+}
+
+.blog-title button{
+    display: block;
+    margin: 10px 0;
+    padding: .7rem 2rem;
+    background-color: var(--midnight);
+}
+
+.blog .services .blog-content .blog-title h2{
+    font-family: 10px;
+}
+  /* SERVICES SECTION STOPS HERE------------------------------- */
+
+
+/* PLANS SECTION STARTS HERE--------------------------------------------- */
+
+.plan-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem ;
+}
+
+.plan-toggle {
+    margin-top: 2rem;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+}
+
+.toggle-btn {
+    margin: 0 2rem;
+}
+
+.checkbox {
+    display: none;
+}
+  
+.sub {
+    background: linear-gradient(135deg, rgba(194, 173, 204, 1) 0%, rgba(125, 194, 241, 1) 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 25px; 
+    width: 50px; 
+    border-radius: 1.6rem;
+    padding: 0.3rem;
+}
+
+.circle {
+    background-color: #fff;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+}
+
+.checkbox:checked + .sub {
+    justify-content: flex-end;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+  
+.plan {
+    background: #fff;
+    color: hsl(233, 13%, 49%);
+    border-radius: 0.8rem;
+    gap: 3rem;
+}
+  
+.plans .plan.active {
+    background: linear-gradient(135deg, rgba(194, 173, 204, 1) 0%, rgba(125, 194, 251, 1) 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transform: scale(1.1);
+    z-index: 1;
+    margin: 0 2rem;
+    padding-right: 40px;
+
+}
+
+.plan.active .price {
+    color: #fff;
+}
+  
+.plan > ul {
+    margin: 2.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.plan > ul >li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+ul li.price {
+    font-size: 3rem;
+    color: hsl(232, 13%, 33%);
+    padding-bottom: 2rem;
+}
+
+.plans .shadow {
+    box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
+    padding-right: 30px;
+ 
+}
+
+.plans .shadow:hover {
+    box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(124, 193, 234, 1) 0%, rgba(105, 124, 211, 1) 100%);
+    color: white;
+}
+  
+
+.plans .btn {
+    margin-top: 1rem;
+    height: 2.6rem;
+    width: 13.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: #3f4954;
+    background: transparent;
+    color: #fff;
+    font-weight: bold;
+}
+
+.plans .btn:hover{
+    background: linear-gradient(135deg, rgba(163, 168, 240, 1) 0%,  rgba(105, 111, 221, 1) 100% );
+
+}
+
+.plans .active-btn {
+    background: #fff;
+    color: hsl(237, 63%, 64%);
+}
+
+.bottom-bar {
+    border-bottom: 2px solid hsla(240, 8%, 85%, 0.582);
+}
+
+.plans.active .bottom-bar {
+    border-bottom: 2px solid hsla(240, 8%, 85%, 0.253);
+}
+
+.pack {
+    font-size: 1.1rem;
+}
+
+/* PLANS SECTION STARTS HERE--------------------------------------------- */
+
+
+/* ABOUT-US  HTML STYLING----------------------------------------------------- */
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin: 3rem;
+}
+
+.about-img >img{
+    width: 450px;
+    height: 550px;
+    border-radius: 10px;
+}
+
+.about-us-text > h2 >.a{
+    color: var(--midnight);
+    line-height: 2;
+}
+
+.about-us-text > h2 >.b{
+    color: #D8C4B6;
+    line-height: 2;
+}
+
+.about-us-text > h2{
+    line-height: 2;
+    color: #526D82;
+}
+
+.about-us-text > p{
+    line-height: 1;
+    color: #9BABB8;
+    font-size: 22px;
+}
+
+.about-us-text > p{
+    line-height: 1;
+    color: #9BABB8;
+    font-size: 22px;    
+}
+
+.about-us-text .btn{
+    display: flex;
+    background-color: #526D82;
+    border: 1px solid ;
+}
+
+.offer{
+    display: flex;
+    gap: 2rem;
+    margin: 0 4rem;
+    padding: 2rem;
+}
+
+.offer .offers-1{
+    margin-top: 6rem;
+
+}
+
+.offer p{
+    line-height: 2;
+}
+ 
+.offer .offers-1 .btn{
+    background-color: #4F200D;
+    margin-top: 2rem;
+}
+
+.cart{
+    margin: 2rem;
+    background-color: var(--gray);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    color: #fff;
+    
+}
+.offer .cart .card-icon{
+    font-size: 30px;
+}
+
+
+/* CONTACTS  HTML STYLING------------------------------------------------- */
+
+.contact-form h1{
+    margin:3rem 10rem;
+    color: #4F200D;
+
+}
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 60%;
+    margin:3rem 10rem;
+    border-radius: 10px;
+}
+
+.form-inputs input{
+    padding: 1rem 3rem;
+}
+
+
+.form-inputs input:nth-child(4){
+    padding-bottom: 6rem ;
+}
+
+::placeholder{
+    padding: 0;
+}
+.contact-form > .btn{
+    margin: 0 10rem;
+    display: flex;
+    background-color: #526D82;
+    border: 1px solid ;
+    
+}
+
+
+/* SERVICES -HTML STYLING------------------------------------------ */
+
+.services-top{
+    margin: 2rem 13rem;
+
+}
+
+.services-render-a, .services-render-b{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.service-edit{
+    display: flex;
+    gap: 2rem;
+    background-color: #C7E9B0;
+    margin: 2rem;
+    border-radius: 20px;
+    padding: 1rem;
+    width: 100%;
+
+}
+.service-edit .service-t-icon > p{
+    font-size: 45px;
+}
+
+
+
+
+
+
+
+@media (max-width: 280px) {
+    ul {
+   margin: 1rem;
+    }
+    h1 {
+      font-size: 1.2rem;
+    }
+    .toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 80px;
+    }
+    .plans {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .plan {
+      transform: scale(0.8);
+      margin-bottom: 1rem;
+    }
+    .plans .plan.active {
+      transform: scale(0.8);
+      
+    }
+}
+  
+
+
+
+
+@media (min-width: 280px) and (max-width: 320px) {
+    ul {
+      margin: 20px;
+    }
+    .plans {
+      display: flex;
+      flex-direction: column;
+    }
+    .plan {
+      margin-bottom: 1rem;
+    }
+    .plans .plan.active {
+      transform: scale(1);
+    }
+}
+  
+@media (min-width: 320px) and (max-width: 414px) {
+    .plans {
+      display: flex;
+      flex-direction: column;
+    }
+    .plan {
+      margin-bottom: 1rem;
+    }
+    .plans .plan.active {
+      transform: scale(1);
+    }
+}
+
+@media (min-width: 414px) and (max-width: 768px) {
+    .plan {
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+    }
+    .plans .plan.active {
+      transform: scale(1);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1046px) {
+    .plans {
+      display: flex;
+    }
+    .plan {
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+    }
+    .plans .plan.active {
+      transform: scale(1);
+    }
+}
+
+/* PLANS STOPS HERE----------------------------------- */
+
+
+/* FOOTER SECTION  -------------------------- */
+.footer-section   {
+    background: var(--gray-dark);
+    color:var(--white);
+ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 2rem 3rem;
+    margin-top: 5rem ;
+    position: relative;
+    gap: 30px;
+}
+
+.about-us p, .instagram p, 
+.newsletters p, .follow-us p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-us  {
+    width: 80%;
+}
+.newsletters .newsletters-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletters .newsletters-input input{
+    background: var(--white);
+    padding: .4rem .8rem;
+    font-family: var(--Josefin);
+    font-size: 18px;
+    color: var(--gray-dark);
+    border-radius: 10px;
+    outline: none;
+}
+
+.newsletters .newsletters-input .btn{
+    border-radius: 5px;
+    padding: .5rem .8rem;
+}
+
+.galleries-content img{
+    width: 25%;
+    margin: 5px;
+}
+
+.follow-us-icons i{
+    color: var(--white);
+    margin: 10px;
+}
+
+.move-up{
+    position: absolute;
+    right: 7rem;
+    top: 50%;
+    font-size: 2rem;
+    color: teal;
+    cursor: pointer;
+}
+
+.move-up:hover{
+    color: var(--white);
+}
+
+
+footer > .footer-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px auto;
+
+}
